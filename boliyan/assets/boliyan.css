@@ -1,0 +1,17 @@
+
+[lang=pa]{font-family:'Noto Sans Gurmukhi','Raavi','Nirmala UI',var(--font)}
+.bls{list-style:none;padding:0;margin:16px 0;display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(min(100%,400px),1fr))}
+.bl{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:16px;display:flex;flex-direction:column;gap:8px}
+.bl h3{margin:0;font-size:1rem}
+.bl .pa{margin:0;font-size:1.22rem;line-height:1.9;white-space:pre-line;font-weight:600}
+.bl .ro{margin:0;color:var(--soft);font-style:italic;white-space:pre-line;font-size:.97rem}
+.bl .en{margin:0;font-size:.97rem}
+.bl .acts{margin-top:auto;padding-top:6px}
+.bdg{align-self:flex-start;font-size:.78rem;font-weight:700;padding:3px 10px;border-radius:99px;border:1px solid var(--line);background:var(--surface2)}
+.bdg.t{color:var(--accent)}.bdg.n{color:var(--amber)}
+.hub{list-style:none;padding:0;margin:14px 0;display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.hub a{display:block;height:100%;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;text-decoration:none;color:var(--ink)}
+.hub a:hover{border-color:var(--accent);box-shadow:var(--shadow)}.hub b{display:block;font-family:var(--font-head);font-size:1.08rem}.hub i{display:block;font-style:normal;font-weight:600;color:var(--accent);margin:2px 0 6px}
+.hub span{color:var(--soft);font-size:.94rem}
+#one{max-width:640px;margin:14px 0}
+@media print{.bl{break-inside:avoid}}

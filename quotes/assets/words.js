@@ -79,8 +79,8 @@
   var gq = d.getElementById('gq');
   if (gq) {
     var all = null, wait = null, gr = d.getElementById('gr'), gc = d.getElementById('gcount');
-    var get = function () { return wait || (wait = S.json('/data/all.json').then(function (j) { all = j; all.items.forEach(function (x) { x[4] = (x[0] + ' ' + x[2] + ' ' + x[3] + ' ' + x[4] + ' ' + j.cats[x[1]][1]).toLowerCase(); }); return j; })); };
-    var from = function (x) { return ['/' + all.cats[x[1]][0] + '/', all.cats[x[1]][1]]; };
+    var get = function () { return wait || (wait = S.json('/quotes/data/all.json').then(function (j) { all = j; all.items.forEach(function (x) { x[4] = (x[0] + ' ' + x[2] + ' ' + x[3] + ' ' + x[4] + ' ' + j.cats[x[1]][1]).toLowerCase(); }); return j; })); };
+    var from = function (x) { return ['/quotes/' + all.cats[x[1]][0] + '/', all.cats[x[1]][1]]; };
     var tm;
     var find = function () {
       var w = gq.value.toLowerCase().trim().split(/\s+/).filter(Boolean);

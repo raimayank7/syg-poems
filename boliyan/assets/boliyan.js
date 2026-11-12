@@ -1,0 +1,7 @@
+(function(){'use strict';var d=document,box=d.getElementById('one');if(!box)return;var data=null,occ='';
+function show(){var pool=data.filter(function(b){return !occ||b[0]===occ}),b=pool[Math.floor(Math.random()*pool.length)],e=SYG.esc,wa=b[3]+'\n\n'+b[4];
+box.innerHTML='<li class="bl rise"><span class="bdg '+(b[1]==='T'?'t':'n')+'">'+(b[1]==='T'?'ਰਵਾਇਤੀ · Traditional':'ਨਵੀਂ · New, written for this site')+'</span><h3>'+e(b[2])+'</h3><p class="pa" lang="pa">'+e(b[3])+'</p><p class="ro">'+e(b[4])+'</p><p class="en">'+e(b[5])+'</p>'+
+'<div class="acts"><button class="btn sm" type="button" data-wa="'+e(wa)+'">WhatsApp</button><button class="btn sm ghost" type="button" data-copy="'+e(b[3])+'">Copy ਪੰਜਾਬੀ</button><button class="btn sm ghost" type="button" data-copy="'+e(b[4])+'">Copy Roman</button></div></li>';}
+d.addEventListener('click',function(ev){var b=ev.target.closest('#occ button,#pick');if(!b)return;
+if(b.id!=='pick'){occ=b.value;[].forEach.call(d.querySelectorAll('#occ button'),function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});}
+if(data)return show();SYG.json('/boliyan/data/all.json').then(function(j){data=j;show()},function(){SYG.toast('Could not load. Check your connection.')});});})();
