@@ -1,7 +1,7 @@
 /* words to send: copy, WhatsApp, save in this browser, filter a page, search the whole site */
 (function () {
   'use strict';
-  var d = document, S = window.SYG, KEY = 'syg-saved';
+  var d = document, S = window.SYG, KEY = 'syg-saved-slogans';
   function saved() { try { return JSON.parse(localStorage.getItem(KEY) || '[]'); } catch (e) { return []; } }
   function put(l) { try { localStorage.setItem(KEY, JSON.stringify(l.slice(0, 300))); } catch (e) {} }
   function textOf(card) { return [].map.call(card.querySelectorAll('[data-t]'), function (x) { return x.textContent; }).join('\n'); }
